@@ -1,83 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BugFlow Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
 </head>
+
 <body>
 
-<div class="container">
+    <div class="dashboard">
 
-    <div class="sidebar">
+        <!-- Sidebar -->
+        <aside class="sidebar">
 
-        <h2>BugFlow</h2>
+            <div class="logo">
 
-        <ul>
-            <li>Dashboard</li>
-            <li>Bugs</li>
-            <li>Report Bug</li>
-            <li>Projects</li>
-            <li>Reports</li>
-            <li>Logout</li>
-        </ul>
+                <div class="logo-icon">
+                    <i class="fa-solid fa-bug"></i>
+                </div>
+
+                <div>
+                    <h2>BugFlow</h2>
+                    <p>Project Manager</p>
+                </div>
+
+            </div>
+
+            <ul class="menu">
+
+                <li class="active">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-bug"></i>
+                    Bug List
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-plus"></i>
+                    Report Bug
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-user-check"></i>
+                    Assign Bugs
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-chart-column"></i>
+                    Reports
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-users"></i>
+                    Developers
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <!-- Top Bar -->
+
+            <div class="topbar">
+
+                <h1>Dashboard</h1>
+
+                <div class="top-icons">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <div class="user">
+
+                        <img src="images/shubham.png" alt="Profile">
+
+                        <div>
+
+                            <h4 id="userName">User</h4>
+
+                            <p id="userRole">Role</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Welcome -->
+
+            <div class="welcome">
+
+                <h2>Welcome Back, Shubham</h2>
+
+                <p>
+                    Monitor software bugs, assign developers and track
+                    project progress from one place.
+                </p>
+
+            </div>
+
+            <!-- Cards -->
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <i class="fa-solid fa-bug"></i>
+
+                    <h2>30</h2>
+
+                    <p>Total Bugs</p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <h2>3</h2>
+
+                    <p>Open Bugs</p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-spinner"></i>
+
+                    <h2>2</h2>
+
+                    <p>In Progress</p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <h2>21</h2>
+
+                    <p>Resolved</p>
+
+                </div>
+
+            </div>
+
+            <!-- Table -->
+
+            <div class="table-box">
+
+                <h2>Recent Bugs</h2>
+
+                <table>
+
+                    <tr>
+
+                        <th>Bug ID</th>
+
+                        <th>Title</th>
+
+                        <th>Severity</th>
+
+                        <th>Developer</th>
+
+                        <th>Status</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>BUG 1</td>
+
+                        <td>Login Error</td>
+
+                        <td>High</td>
+
+                        <td>Shivraj</td>
+
+                        <td>Open</td>
+
+                        <td><button class="viewBtn">View</button></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>BUG 2</td>
+
+                        <td>Payment Gateway</td>
+
+                        <td>Critical</td>
+
+                        <td>Saurabh</td>
+
+                        <td>In Progress</td>
+
+                       <td><button class="viewBtn">View</button></td>
+
+                    </tr>
+
+                   <tr>
+
+                       <td>BUG 3</td>
+
+                       <td>Profile Update</td>
+
+                       <td>Medium</td>
+
+                       <td>Aman</td>
+
+                       <td>Resolved</td>
+
+                       <td><button class="viewBtn">View</button>
+                   </td>
+
+                 </tr>
+
+                </table>
+
+            </div>
+
+        </main>
 
     </div>
-
-    <div class="main">
-
-        <h1>Dashboard</h1>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Total Bugs</h3>
-                <p>35</p>
-            </div>
-
-            <div class="card">
-                <h3>Open Bugs</h3>
-                <p>12</p>
-            </div>
-
-            <div class="card">
-                <h3>In Progress</h3>
-                <p>8</p>
-            </div>
-
-            <div class="card">
-                <h3>Resolved</h3>
-                <p>15</p>
-            </div>
-
-        </div>
-
-        <h2>Recent Bugs</h2>
-
-        <table>
-
-            <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Status</th>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Login Error</td>
-                <td>Open</td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Payment Issue</td>
-                <td>Resolved</td>
-            </tr>
-
-        </table>
-
-    </div>
-
-</div>
-
+<script src="dashboard.js"></script>
 </body>
+
 </html>

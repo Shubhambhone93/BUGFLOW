@@ -1,29 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BugFlow Login</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="login-container">
+<div class="container">
 
-    <div class="login-box">
+    <!-- Left side -->
+    <div class="left">
 
-        <h1>BugFlow</h1>
-        <p>Bug Tracking & Management System</p>
+       <h1 class="logo">
+    <i class="fa-solid fa-bug"></i> BugFlow
+</h1>
 
-        <input type="email" placeholder="Enter Email">
+        <h2>Track. Manage. Resolve.</h2>
 
-        <input type="password" placeholder="Enter Password">
+        <p>
+            Centralized bug reporting, assignment, tracking and resolution for software development teams.
+        </p>
 
-        <button onclick="window.location.href='dashboard.html'">
-            Login
-        </button>
+        <div class="features">
+
+    <div class="feature">
+        <i class="fa-solid fa-bug"></i>
+        <span>Report Software Bugs</span>
+    </div>
+
+    <div class="feature">
+        <i class="fa-solid fa-user-gear"></i>
+        <span>Assign Developers</span>
+    </div>
+
+    <div class="feature">
+        <i class="fa-solid fa-list-check"></i>
+        <span>Track Bug Status</span>
+    </div>
+
+    <div class="feature">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>View Reports</span>
+    </div>
+
+</div>
+
+    </div>
+
+    <!-- Right side -->
+
+    <div class="right">
+
+        <div class="login-card">
+
+            <h2>Welcome To BugFlow</h2>
+
+            <p>Login to continue</p>
+
+            <form>
+
+                <label>Select Role</label>
+
+                <select id="role">
+
+                    <option>Select Role</option>
+
+                    <option>Admin</option>
+
+                    <option>Project Manager</option>
+
+                    <option>Developer</option>
+
+                    <option>Tester</option>
+
+                </select>
+
+                <label>Email</label>
+
+                <input type="email"
+                placeholder="Enter Email">
+
+                <label>Password</label>
+
+                <input type="password"
+                placeholder="Enter Password">
+
+                <button type="button" id="loginBtn"> Login</button>
+
+            </form>
+
+        </div>
 
     </div>
 
 </div>
 
+<script src="login.js"></script>
 </body>
 </html>
